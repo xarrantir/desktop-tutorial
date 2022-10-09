@@ -1,0 +1,44 @@
+<div class="container my-5">
+    <h1 class = "mb-3">Edit Transaction</h1>
+    
+    
+    <div class = "row">
+    <div class = "col-6">
+        <form #form = "ngForm" (ngSubmit)="updateTransaction()">
+            <div class="mb-3">
+                <label for="id" class="form-label">ID</label>
+                <input type="text" class="form-control" id="id" readonly
+                name= "id"  [(ngModel)] = "transactionDetails.id">
+              </div>
+          
+                <div class="mb-3">
+                  <label for="carId" class="form-label">Car ID</label>
+                  <input type="number" class="form-control" id="carId"
+                  name= "carId"  [(ngModel)] = "transactionDetails.carId">
+                </div>
+                <div class="mb-3">
+                  <label for="cost" class="form-label">Cost</label>
+                  <input type="number" class="form-control" id="cost"
+                  name= "cost"  [(ngModel)] = "transactionDetails.cost">
+                </div>
+                  <div class="mb-3">
+                    <label for="payMethod" class="form-label">Payment Method</label>
+                    <input type="text" class="form-control" id="payMethod"
+                    name= "payMethod"  [(ngModel)] = "transactionDetails.payMethod">
+                    <div id="payMethodhelp" class="form-text">We'll never share your payment information with anyone else.</div>
+    
+                  </div>
+                <button type="submit" class="btn btn-primary mr-5">Save</button>
+                <button type="button" class="btn btn-danger" 
+                (click)="deleteTransaction(transactionDetails.id)">Delete</button>
+                <button type="button" class="btn btn-primary mr-5"
+                [routerLink]="['/transactions']">Cancel</button>
+              </form>
+        
+    </div>
+    </div>
+    
+    
+    
+    </div>
+    

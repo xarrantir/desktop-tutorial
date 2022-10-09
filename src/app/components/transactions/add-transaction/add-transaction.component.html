@@ -1,0 +1,35 @@
+<div class="container my-5">
+  <h1 class = "mb-3">Add New Transaction</h1>
+  
+  
+  <div class = "row">
+  <div class = "col-6">
+      <form #form = "ngForm" (ngSubmit)="addTransaction()">
+        
+              <div class="mb-3">
+                <label for="carId" class="form-label">Car ID</label>
+                <input type="number" class="form-control" id="carid"
+                name= "carId"  [(ngModel)] = "addTransactionRequest.carId">
+              </div>
+              <div class="mb-3">
+                <label for="cost" class="form-label">Cost</label>
+                <input type="number" class="form-control" id="cost"
+                name= "cost"  [(ngModel)] = "addTransactionRequest.cost">
+              </div>
+                <div class="mb-3">
+                  <label for="payMethod" class="form-label">Payment Method</label>
+                  <input type="text" class="form-control" id="paymethod"
+                  name= "payMethod"  [(ngModel)] = "addTransactionRequest.payMethod">
+                  <div id="payMethodhelp" class="form-text">We'll never share your payment information with anyone else.</div>
+  
+                </div>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+      
+  </div>
+  </div>
+  
+  
+  
+  </div>
+  
